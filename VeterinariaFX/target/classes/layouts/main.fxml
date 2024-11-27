@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.MainController">
+    <Label text="Sistema Veterinário" styleClass="header" />
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <VBox GridPane.columnIndex="0">
+            <TextField fx:id="nomeClienteField" promptText="Nome do Cliente" />
+            <TextField fx:id="telefoneField" promptText="Telefone" />
+            <Button fx:id="cadastrarClienteButton" text="Cadastrar Cliente" onAction="#cadastrarCliente" />
+        </VBox>
+        <VBox GridPane.columnIndex="1">
+            <TextField fx:id="nomePetField" promptText="Nome do Pet" />
+            <TextField fx:id="especieField" promptText="Espécie" />
+            <TextField fx:id="racaField" promptText="Raça" />
+            <Button fx:id="cadastrarPetButton" text="Cadastrar Pet" onAction="#cadastrarPet" />
+        </VBox>
+    </GridPane>
+    <TableView fx:id="clientesTable" prefHeight="300" prefWidth="700">
+        <columns>
+            <TableColumn fx:id="nomeClienteColumn" text="Cliente" />
+            <TableColumn fx:id="telefoneColumn" text="Telefone" />
+            <TableColumn fx:id="petsColumn" text="Pets" />
+        </columns>
+    </TableView>
+    <Button fx:id="removerClienteButton" text="Remover Cliente" onAction="#removerCliente" />
+</VBox>

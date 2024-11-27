@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.DetalhesController">
+    <Label fx:id="nomeClienteLabel" styleClass="header" />
+    <Label fx:id="telefoneLabel" styleClass="subheader" />
+    <Label text="Pets do Cliente" styleClass="subheader" />
+    <ListView fx:id="petsList" prefHeight="100" prefWidth="400" />
+    <Label text="Agendar Consulta" styleClass="header" />
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <TextField fx:id="servicoField" promptText="Serviço" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="dataField" promptText="Data" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="horarioField" promptText="Horário" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button fx:id="agendarConsultaButton" text="Agendar" onAction="#agendarConsulta" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+    </GridPane>
+    <Label text="Consultas Agendadas" styleClass="subheader" />
+    <ListView fx:id="consultasList" prefHeight="100" prefWidth="400" />
+</VBox>
